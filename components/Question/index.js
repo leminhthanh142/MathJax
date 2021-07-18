@@ -8,7 +8,7 @@ export const Question = ({question}) => {
   return (
     <View style={styles.questionContainer}>
       <View>
-        <Text>Question: {question.id}</Text>
+        <Text>Question: {question.id}: </Text>
         <MathJaxFormat mathJaxText={question.name} />
       </View>
       <View>
