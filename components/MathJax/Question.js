@@ -9,7 +9,7 @@ export const Question = ({question}) => {
   return (
     <View style={styles.questionContainer}>
       <View>
-        <Text>Question: {question.id}</Text>
+        <Text>Question {question.id}: </Text>
         <MathJax html={question.name} mathJaxOptions={MathJaxOptions} />
       </View>
       <View>
