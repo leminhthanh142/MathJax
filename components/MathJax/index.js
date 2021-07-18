@@ -1,21 +1,12 @@
 import React from 'react';
-import {Question} from './Question';
 import {View} from 'react-native';
-import {StyleSheet} from 'react-native';
+import MathJax from 'react-native-mathjax';
+import config from '../../config';
 
-export const Exam = ({questions}) => {
+export const MathJaxFormat = ({mathJaxText}) => {
   return (
-    <View style={styles.container}>
-      {questions.map(question => (
-        <Question key={question.id} question={question} />
-      ))}
+    <View>
+      <MathJax html={mathJaxText} mathJaxOptions={config.mathjax} />
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    paddingHorizontal: 20,
-  },
-});
